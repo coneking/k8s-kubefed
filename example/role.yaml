@@ -1,0 +1,14 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: role-test
+rules:
+- apiGroups: ["*"]
+  resources:
+  - pods/log
+  - pods/status
+  - pods/top
+  verbs:
+  - get
+  - list
+  - watch

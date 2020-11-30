@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+   name: echo
+spec:
+  selector:
+    matchLabels:
+      app: echo
+  template:
+    metadata:
+      labels:
+        app: echo
+    spec:
+      containers:
+      - name: echo
+        image: k8s.gcr.io/echoserver:1.10
+        ports:
+        - name: http
+          containerPort: 8080
+        - name: https
+          containerPort: 8443
