@@ -1,5 +1,11 @@
 # Kubefed
 
+Kubefed permite la replicación de recursos k8s de un cluster a otro creando un grupo de clusters k8s federados.
+
+Se pueden tener varios cluster federados y replicar los despliegues del cluster principal al resto de cluster federados haciendo cambios si es que fuese necesario (cantidad de replicas, imagen a utilizar, annotations, etc).
+
+<br>
+
 ## Instalar Kubefed
 
 Instalación vía HELM (Instalación en uno de los cluster k8s)
