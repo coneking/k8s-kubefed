@@ -14,7 +14,7 @@ Instalación vía HELM (Instalación en uno de los cluster k8s)
 $ kubectl create ns kube-federation-system
 $ helm repo add kubefed-charts https://raw.githubusercontent.com/kubernetes-sigs/kubefed/master/charts
 $ helm repo update
-$ helm install kubefed-charts/kubefed --name kubefed --version=0.3.0 --namespace kube-federation-system
+$ helm upgrade -i kubefed kubefed-charts/kubefed --version=0.9.0 --namespace kube-federation-system --create-namespace
 ```
 
 <br>
