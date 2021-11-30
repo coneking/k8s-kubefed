@@ -33,7 +33,7 @@ Kubefedctl es un binario que se utiliza para crear un grupo de clusters k8s y tr
 
 
 ```sh
-$ wget https://github.com/kubernetes-sigs/kubefed/releases/download/v0.5.1/kubefedctl-0.5.1-linux-amd64.tgz -O - |tar -xz
+$ wget https://github.com/kubernetes-sigs/kubefed/releases/download/v0.9.0/kubefedctl-0.9.0-linux-amd64.tgz -O - |tar -xz
 $ sudo mv kubefedctl /usr/local/bin
 ```
 
