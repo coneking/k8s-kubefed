@@ -45,9 +45,9 @@ Es importante tener en cuenta que el registro de clusters depende del archivo ku
 
 ```sh
 $ kubectl config get-contexts
-CURRENT   NAME    CLUSTER         AUTHINFO           NAMESPACE
-          kafka   cluster.kafka   kubernetes-kafka   
-*         test    cluster.local   kubernetes-admin   
+CURRENT   NAME            CLUSTER         AUTHINFO           NAMESPACE
+          cluster-kafka   cluster-kafka   kubernetes-kafka   
+*         cluster-test    cluster-test    kubernetes-admin   
 ```
 
 <br>
@@ -55,8 +55,8 @@ CURRENT   NAME    CLUSTER         AUTHINFO           NAMESPACE
 Para agregar contextos de k8s a un cluster Federado ejecutamos lo siguiente
 
 ```sh
-$ kubefedctl join test --cluster-context test --host-cluster-context test --v=2
-$ kubefedctl join kafka --cluster-context kafka --host-cluster-context test --v=2
+$ kubefedctl join test --cluster-context cluster-test --host-cluster-context cluster-test --v=2
+$ kubefedctl join kafka --cluster-context cluster-kafka --host-cluster-context cluster-test --v=2
 ```
 
 En este ejemplo se crea un cluster federado llamado "test" que se compone del contexto k8s test y el contexto k8s kafka
